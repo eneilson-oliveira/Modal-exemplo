@@ -16,8 +16,8 @@ const MODAL_STYLE = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%,-50%)',
-  padding: '150px',
-  backgroundColor: '#fff',
+ 
+  backgroundColor:'#dbdbdb',
   borderRadius: '10px',
   color: 'black'
 }
@@ -27,11 +27,8 @@ export default function Modal({ isOpen, setModalOpen, children }) {
     return (
       <div style={BACKGROUND_STYLE}>
         <div style={MODAL_STYLE}>
-          <div style={{ cursor: 'pointer'}} onClick={setModalOpen}>
-            x
-          </div>
           <div>{children}</div>
-          <button onClick={setModalOpen}>Fechar</button>
+          <div className='fechar' onClick={setModalOpen}>Sair</div>
         </div>
       </div>
     )
